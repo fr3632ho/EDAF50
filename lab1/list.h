@@ -6,6 +6,8 @@
  */
 class List {
 public:
+
+	int list_size;
 	/* creates an empty list */
 	List();
 	
