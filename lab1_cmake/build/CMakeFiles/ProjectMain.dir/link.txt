@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ProjectMain.dir/ltest.cc.o  -o ProjectMain  liblab1/libTestLib.a 

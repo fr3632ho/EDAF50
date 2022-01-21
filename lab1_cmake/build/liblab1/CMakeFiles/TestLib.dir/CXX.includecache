@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../liblab1/coding.h
+
+/h/d6/z/fr3632ho-s/C++/EDAF50/lab1_cmake/liblab1/coding.cc
+coding.h
+-
+
+/h/d6/z/fr3632ho-s/C++/EDAF50/lab1_cmake/liblab1/list.cc
+iostream
+-
+list.h
+/h/d6/z/fr3632ho-s/C++/EDAF50/lab1_cmake/liblab1/list.h
+
+/h/d6/z/fr3632ho-s/C++/EDAF50/lab1_cmake/liblab1/list.h
+
