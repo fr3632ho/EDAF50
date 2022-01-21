@@ -11,9 +11,9 @@ void example1()
     Foo f(10);
     {
         cout << "entering inner block\n";
-        Foo g(20);
+        Foo g(20);        
         cout << "leaving inner block\n";
-    }
+    }    
 }
 
 int main()

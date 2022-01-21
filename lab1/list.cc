@@ -13,6 +13,7 @@ List::~List() {
 	if (empty()) {
 		return;
 	}
+
 	Node *temp = first->next;
 	while (temp != nullptr) {
 		temp = temp->next;

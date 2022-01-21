@@ -1,0 +1,6 @@
+/h/d6/z/fr3632ho-s/C++/EDAF50/lab1/cmake-example/build/CMakeFiles/rebuild_cache.dir
+/h/d6/z/fr3632ho-s/C++/EDAF50/lab1/cmake-example/build/CMakeFiles/edit_cache.dir
+/h/d6/z/fr3632ho-s/C++/EDAF50/lab1/cmake-example/build/CMakeFiles/SimpleMain.dir
+/h/d6/z/fr3632ho-s/C++/EDAF50/lab1/cmake-example/build/testlib/CMakeFiles/rebuild_cache.dir
+/h/d6/z/fr3632ho-s/C++/EDAF50/lab1/cmake-example/build/testlib/CMakeFiles/edit_cache.dir
+/h/d6/z/fr3632ho-s/C++/EDAF50/lab1/cmake-example/build/testlib/CMakeFiles/TestLib.dir
