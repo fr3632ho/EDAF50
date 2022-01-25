@@ -1,0 +1,49 @@
+1. What is the difference between a declaration and a definition?
+
+Declaration => Communicates with the compiler: type of variable, name of variable and perhaps an inital value that it takes.
+
+Definition => Communicates where variable and it's value gets stored (heap memory / stack memory etc.). That is memory for the variable is allocated during the definition of the variable.
+
+
+2. How does an include guard prevent multiple definitions?
+
+An include guard can prevent duplication of a file include. I.e. if file A has included file B & C, while B is including C, we can prevent the compiler from loading a given file twice. 
+
+#ifndef <IDENTIFIER>
+#define <IDENTIFIER>
+
+// Include your code here
+
+#endif
+
+3. How can you tell if an error comes from the compiler or the linker? Does a linker error mean that you have an error in your source code? How do you (typically) fix a linker error?
+
+COMPILE ERROR:
+
+Compiler errors mean the compiler could not translate the source code you provided into object code. It usually means you have a syntactic or semantic error in your own program that you have to resolve before your program exhibits the behavior you're intending it to have.
+
+
+LINKER ERROR:
+
+Linker errors mean the linker could not build an executable program from the object code you provided. It usually means your program does not properly interface with its own dependencies or with the outside world (e.g. external libraries).
+
+Fixing a linker error can be done by properly managing dependencies between created object files (i.e. perhaps reviewing the code or flags).
+
+
+4. Do you have to make any changes to MakefileWithDeps to build your hello world program?
+
+In the makefile we have in the lab we had to add the name of the executable (hello) to the definition of progs. We also had to add the rule of object files for which to produce our executable.
+
+
+5. In encode and decode, the type unsigned char is used. Would your code work the same way if that type is changed to char or signed char?
+
+The range for char and signed char is -128 to 127 while unsigned is of range 0 to 255. The encoding and decoding process would look the same but might produce a different encoding.
+
+
+6. In the coding problem, reading the file with char ch; while (infile >> ch) ... doesn’t work. Why?
+
+infile >> ch => using this straight away skips whitespaces from the input file. So copying text from a file will be incomplete.
+
+7. If your program crashes, how can you use the debugger to get a stack trace similar to that of Exception.printStackTrace() in Java?
+
+You can use both fsanitize, valgrind and gdb to analyse errors while running your code (as well as memory leaks). With gdb you can step through your code and print the current stack frame, if needed, to analyse the state of the program.
