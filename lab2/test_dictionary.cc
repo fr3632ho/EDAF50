@@ -25,11 +25,12 @@ int main() {
     cout << endl;
     cout << line.max_size() << endl;
     for (int i = 0; i < 25; i++) {
-        cout << "length of word(s) := " << i << " => ";
-        for (int j = 0; j < 5; j++) {
+        cout << "length of word(s) := " << i + 1 << " => ";
+        for (int j = 0; j < 5 && j < w[i].size(); j++) {
             cout << w[i][j].get_word() << ", ";
         }
         cout << endl;
-    }    
+    }
+    d.get_suggestions("hello");
     return 0;
 }

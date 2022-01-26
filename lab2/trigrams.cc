@@ -6,7 +6,6 @@
 #include <string>
 #include <iterator>
 #include <stdlib.h>
-#include <boost/algorithm/string/join.hpp>
 
 #define pb push_back
 
@@ -53,7 +52,7 @@ vector<string> create_trigrams_list(string file_name) {
             vector<string> temp_trigrams = get_trigrams(line);
             trigrams.insert(trigrams.end(), temp_trigrams.begin(), temp_trigrams.end());
         }
-        
+
         output.pb(join_vector(trigrams));
     }
     std::sort(output.begin(), output.end());
