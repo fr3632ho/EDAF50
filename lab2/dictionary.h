@@ -3,10 +3,9 @@
 
 #define WORD_SIZE 25
 
-
 #include <string>
 #include <vector>
-#include <bits/stdc++.h>
+#include <unordered_set>
 #include "word.h"
 #include "trigrams.h"
 

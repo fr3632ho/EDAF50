@@ -1,9 +1,11 @@
 #include <iostream>
 #include <fstream>
-#include <stdlib.h>
 #include <algorithm>
 #include <vector>
-#include <string.h>
+#include <sstream>
+#include <string>
+#include <iterator>
+#include <stdlib.h>
 #include <boost/algorithm/string/join.hpp>
 
 #define pb push_back
@@ -28,6 +30,12 @@ vector<string> get_trigrams(const string& word) {
     return trigrams;
 }
 
+string join_vector(vector<string> vec) {
+    std::ostringstream string_stream;
+    std::copy(vec.begin(), vec.end(), std::ostream_iterator<string>(string_stream, " "));
+    return string_stream.str();
+}
+
 vector<string> create_trigrams_list(string file_name) {
     ifstream input_file(file_name);
 
@@ -45,7 +53,8 @@ vector<string> create_trigrams_list(string file_name) {
             vector<string> temp_trigrams = get_trigrams(line);
             trigrams.insert(trigrams.end(), temp_trigrams.begin(), temp_trigrams.end());
         }
-        output.pb(boost::algorithm::join(trigrams, " "));
+        
+        output.pb(join_vector(trigrams));
     }
     std::sort(output.begin(), output.end());
     input_file.close();
