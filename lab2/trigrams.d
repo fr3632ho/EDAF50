@@ -1,0 +1,1 @@
+trigrams.o: trigrams.cc
