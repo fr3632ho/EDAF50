@@ -1,5 +1,7 @@
 #include <iostream>
 #include <iomanip> // for setw and setfill
+#include <string>
+#include <sstream>
 #include "date.h"
 
 using std::cout;
@@ -57,8 +59,10 @@ int main() {
 	cout << "--- New Year's Eve and the next day:" << endl;
 	Date d2(2013, 12, 31);
 	print(d2);
+	std::string answer1("2013-12-31");
 	cout << endl;
 	d2.next();
+	std::string answer2("2014-01-01");
 	print(d2);
 	cout << endl;
 }

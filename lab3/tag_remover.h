@@ -2,13 +2,16 @@
 #define TAG_REMOVER
 
 #include <iostream>
+#include <string>
 
 class TagRemover {
 public:
     TagRemover(std::istream &instream);
     void print(std::ostream &out);
-    void untag() const;
-    void translate() const;
+    void untag();
+    void translate();
+private:
+    std::string html;
 };
 
 #endif
