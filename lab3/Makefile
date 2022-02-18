@@ -21,7 +21,7 @@ LDFLAGS =   -g
 #LDFLAGS +=  -stdlib=libc++
 
 # Targets
-PROGS =  test_tagremover test_prime_numbers
+PROGS =  test_tagremover test_prime_numbers date_test
 
 all: $(PROGS)
 
@@ -30,6 +30,8 @@ tag_remover: tag_remover.o
 test_tagremover: test_tagremover.o tag_remover.o
 prime_numbers: prime_numbers.o
 test_prime_numbers: test_prime_numbers.o prime_numbers.o
+date: date.o
+date_test: date_test.o date.o
 
 # Create tests
 testTags:
