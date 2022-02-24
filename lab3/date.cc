@@ -2,6 +2,7 @@
 #include "date.h"
 #include <iostream>
 #include <ios>
+#include <string>
 
 using std::ostream;
 using std::istream;
