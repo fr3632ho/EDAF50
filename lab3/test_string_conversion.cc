@@ -19,25 +19,9 @@ template<> double string_cast<double>(const char c[]) {
 }
 
 template<> Date string_cast<Date>(const char c[]) {
-    std::string s;
-    int year;
-    for (int i = 0; i < 4; i++) {
-        s += c[i];
-    }
-    year = stoi(s);
-    s = "";
-    int month;
-    for (int i = 5; i < 7; i++) {
-        s += c[i];
-    }
-    month = stoi(s);
-    s = "";
-    int day;
-    for (int i = 8; i < 10; i++) {
-        s += c[i];
-    }
-    day = stoi(s);
-    Date d(year, month, day);
+    std::istringstream is(c);
+    Date d;
+    is >> d;
     return d;
 }
 
