@@ -13,27 +13,19 @@ using std::remove_if;
 UMNS::UMNS(){};
 
 void UMNS::insert(const HostName& hn, const IPAddress& ip) {
-    umns[hn] = ip;
+    umns.insert(make_pair(hn, ip));
 }
 
 bool UMNS::remove(const HostName& hn) {
-    unordered_map<HostName, IPAddress>::iterator it = find_if(umns.begin(), umns.end(), [&hn](const pair<HostName, IPAddress>& p) {
-        return p.first == hn;
-    });
-
-    if (it != umns.end()) {
-        umns.erase(it);
-        return true;
-    }
-    return false;
+    return umns.erase(hn) > 0;
 }
 
 IPAddress UMNS::lookup(const HostName& hn) const {
-    unordered_map<HostName, IPAddress>::iterator it = find_if(umns.begin(), umns.end(), [&hn](const pair<HostName, IPAddress>& p) {
-        return p.first == hn;
-    });
-    if (it != umns.end()) {
+    auto it = umns.find(hn);
+    if(it != umns.end()){
         return it->second;
     }
-    return NON_EXISTING_ADDRESS;
+    else { 
+        return NON_EXISTING_ADDRESS;
+    }
 }

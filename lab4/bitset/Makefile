@@ -21,17 +21,17 @@ LDFLAGS =   -g
 #LDFLAGS +=  -stdlib=libc++
 
 # Targets
-PROGS =  nstest nstime
+PROGS =  simplebitsettest bitsettest1 bitsettest2
 
 all: $(PROGS)
 
 # Targets rely on implicit rules for compiling and linking
-vns: vns.o
-mns: mns.o
-umns: umns.o
-hns: hns.o
-nstest: nstest.o vns.o mns.o umns.o hns.o
-nstime: nstime.o vns.o mns.o umns.o hns.o
+simplebitset: simplebitset.o
+simplebitsettest: simplebitset.o simplebitsettest.o
+bitset: bitset.o
+bitreference: bitreference.o
+bitsettest1: bitset.o bitreference.o bitsettest1.o
+bitsettest2: bitset.o bitreference.o bitsettest2.o
 
 # Create tests
 

@@ -17,7 +17,7 @@ void VNS::insert(const HostName& hn, const IPAddress& ip) {
 }
 
 bool VNS::remove(const HostName& hn) {
-    vector<pair<HostName, IPAddress> >::iterator it = find_if(vns.begin(), vns.end(), [&hn](const pair<HostName, IPAddress>& p) {
+    auto it = remove_if(vns.begin(), vns.end(), [&hn](const pair<HostName, IPAddress>& p) {
         return p.first == hn;
     });
     if (it != vns.end()) {
@@ -28,7 +28,7 @@ bool VNS::remove(const HostName& hn) {
 }
 
 IPAddress VNS::lookup(const HostName& hn) const {
-    vector<pair<HostName, IPAddress> >::iterator it = find_if(vns.begin(), vns.end(), [&hn](const pair<HostName, IPAddress>& p) {
+    auto it = find_if(vns.begin(), vns.end(), [&hn](const pair<HostName, IPAddress>& p) {
         return p.first == hn;
     });
     if (it != vns.end()) {

@@ -1,0 +1,24 @@
+
+REFLECTIONS:
+
+(1)
+
+In our implementation, of each and every container class, we did not create any temporary/copy objects. We took a look at the lambda functions we had written and we are under the assumption that ours do not produce any copy operations. I assume if we had, this could have drastically slowed down our own HashMap implementation since each call to lookup/insert/remove might be creating another object which could be avoided.
+
+(2)
+
+The reference given by Bitset operator[] is an embedded class within Bitset that is emulating a reference to a boolean. The reference then access the true address in memory and flipping said bit.
+
+(3)
+
+The operator++() method will be pre-increment. When defining post-increment we simply include a dummy argument of type int.
+
+(4)
+
+This one took quite a while to finish, but after looking through some notes and stack-overflow we found that we could perform a static cast with the other operator. This gave us a neat one-liner.
+
+(5)
+
+On this topic we are unsure about how to determine which use case would benefit more from lvalue vs. rvalue. So I guess we have a question back instead, which would be how do you determine which is best and when?
+
+

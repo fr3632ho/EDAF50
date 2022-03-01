@@ -3,6 +3,11 @@
         "tuple": "cpp",
         "utility": "cpp",
         "vector": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "map": "cpp"
     }
 }

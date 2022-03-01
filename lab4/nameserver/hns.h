@@ -1,5 +1,7 @@
 #include "nameserverinterface.h"
 #include <vector>
+#include <string>
+#include <unordered_map>
 
 using std::vector;
 using std::pair;
@@ -12,5 +14,5 @@ public:
     bool remove(const HostName& hn) override;
     IPAddress lookup(const HostName&) const override;
 private:
-    vector<vector<pair<HostName, IPAddress> > > hns;
+    vector<vector<pair<HostName, IPAddress> > > hns;    
 };
