@@ -64,7 +64,7 @@ istream& operator>>(istream &is, Date& d) {
 		is.read(buffer, 4);
 		for (int i = 0; i < 4; i++) {
 			if (!isdigit(buffer[i])) {
-				is.setstate(ios_base::failbit);
+				is.setstate(ios_base::failbit);									
 				return is;
 			}
 		}

@@ -3,7 +3,7 @@
 #include <sstream>
 #include "date.h"
 
-template<typename T> std::string toString(const T d) {
+template<typename T> std::string toString(const T& d) {
     std::ostringstream out;
     out << d;
     return out.str();

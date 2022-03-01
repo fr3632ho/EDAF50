@@ -1,5 +1,4 @@
 #include "tag_remover.h"
-
 #include <iostream>
 #include <sstream>
 #include <regex>

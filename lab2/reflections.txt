@@ -1,0 +1,11 @@
+
+1) 
+    As long as std::cin >> s does not bump into an EOF token the loop will continue.
+
+2)    
+
+
+3)
+
+
+4)
